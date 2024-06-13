@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">.
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <title>Web Topics</title>
+</head>
+<body id="body">
+
+        <header class="header">
+            <div class="navWraper">
+                <nav>
+                    <ul class="nav-list">
+                        <li class="main-title"><a class="homeLink" href="/index.html">Web Topics</a></li>
+                        <div class="modeFavWraper">
+                            <li>
+                                <div class="navButton" onclick="changeTheMood()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M160 136c0-30.62 4.51-61.61 16-88C99.57 81.27 48 159.32 48 248c0 119.29 96.71 216 216 216 88.68 0 166.73-51.57 200-128-26.39 11.49-57.38 16-88 16-119.29 0-216-96.71-216-216z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+                                    <p class="navButtonText">Dark Mode</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="navButton" onclick="toggleFavourite()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M352.92 80C288 80 256 144 256 144s-32-64-96.92-64c-52.76 0-94.54 44.14-95.08 96.81-1.1 109.33 86.73 187.08 183 252.42a16 16 0 0018 0c96.26-65.34 184.09-143.09 183-252.42-.54-52.67-42.32-96.81-95.08-96.81z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+                                    <p class="navButtonText">Favourites</p>
+                                </div>
+                            </li>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+            <div class="welcomeMessage">
+                <div class="welcomeMessageContent">
+                    <h1>Welcome to our website!</h1>
+                    <h4>We have a new design that's fresh, modern, and easy to use</h4>
+                </div>
+                <div class="triangle1"></div>
+                <div class="triangle2"></div>
+            </div>
+        </header>
+        <main class="mainTopic">
+            <div class="background1">
+            </div>
+
+            <div class="topicWraper">
+
+                <div class="topicInfoSubsWraper">
+                    <div class="topicInfo" id="topicInfo">
+
+
+                    </div>
+
+                    <div class="topicSubs" id="topicSubs">
+                        <div class="topicSubsUnit">
+                            <p class="topicSubsHeader" id="topicSubsHeader"></p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="topicCard" id="topicCard">
+                    <img class="topicCardImage" id="topicCardImage" alt="topic Image" src="./assets/cards/javascript.jpg"/>
+                    
+                    <div class="topicCardAttFavWraper">
+                        <div class="topicCardAtt">
+                            <p class="topicCardAttTitle" id="topicCardAttTitle">HTML</p>
+                            <p class="topicCardAttBy">by</p>
+                            <a class="topicCardAttLink" href="#" id="topicCardAttLink">dum</a>
+                        </div>
+                        <div class="topicCardFavBox">
+                            <p class="intrested">
+                                Interested about this topic?
+                            </p>
+                            <div class="topicCardFavButton">
+                                <p>Add to Favourites</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="topicCardAddToFav" viewBox="0 0 512 512"><path d="M352.92 80C288 80 256 144 256 144s-32-64-96.92-64c-52.76 0-94.54 44.14-95.08 96.81-1.1 109.33 86.73 187.08 183 252.42a16 16 0 0018 0c96.26-65.34 184.09-143.09 183-252.42-.54-52.67-42.32-96.81-95.08-96.81z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+                            </div>
+                            <p class="unlimitedCredits">Unlimited Credits</p>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="fotterForTopic">
+                    <p>Developed with</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="fotterForTopicIcon" viewBox="0 0 512 512"><path d="M352.92 80C288 80 256 144 256 144s-32-64-96.92-64c-52.76 0-94.54 44.14-95.08 96.81-1.1 109.33 86.73 187.08 183 252.42a16 16 0 0018 0c96.26-65.34 184.09-143.09 183-252.42-.54-52.67-42.32-96.81-95.08-96.81z" fill="#ed0000" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+                    <p>©</p>
+                    <p>2024</p>
+                </div>
+            </div>
+            
+        </main>
+        
+        <div class="favWindow" id="favWindow">
+            <p class="favTopics">My Favourite Topics</p>
+            <div class="favCards" id="favCards"></div>
+        </div>
+        <script src="data.js"></script>
+        <script src="script.js"></script>
+        <script src="scriptTopic.js"></script>
+</body>
+
+</html>

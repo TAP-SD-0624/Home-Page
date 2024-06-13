@@ -1,0 +1,535 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --brand-primary: #0768AC;
+    --brand-secondary: #03C180;
+    --bg_default: #FFFFFF;
+    --bg_body: #F0F9FF;
+    --lines-color: #DDDDDD;
+    --body-text: #333333;
+    --heart-color: #DC143C;
+    --triangle2:linear-gradient(60deg, rgba(7,104,172,1) 10%, rgba(3,193,128,1) 100%);
+    --mainFont:"Nunito Sans", sans-serif; 
+}
+.darkColors{
+    --bg_default: #1A1A1A;
+    --bg_body:#282828;
+    --lines-color:#282828;
+    --body-text:#EDEDED;
+}
+
+footer{
+    background-color: var(--bg_default);
+}
+body{
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--bg_default);
+}
+.nav-list{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+.homeLink{
+    text-decoration: none;
+    font-family: var(--mainFont);
+    font-weight: 700;
+    color: var(--brand-primary);
+}
+.homeLink:visited{
+    color: var(--brand-primary);
+
+}
+.modeFavWraper{
+    display: flex;
+    gap: 5px;
+}
+.nav-list{
+    color: var(--body-text);
+    font-family: var(--mainFont);
+    font-weight: 400;
+}
+.navWraper{
+    margin: 0px 30px 15px 30px;
+    background-color: var(--bg_default);
+}
+
+.navButton{
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid var(--lines-color);
+    padding: 4px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: var(--mainFont);
+    font-weight: 700;
+    font-size: 0.7rem;
+}
+.ionicon{
+    width: 15px;
+    color: var(--body-text);
+}
+
+.welcomeMessage{
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: var(--bg_default);
+    height: 100px;
+}
+.triangle1 {
+    width: 100%;
+    height: 50px;
+    background-color:var(--brand-secondary);
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+    position: absolute;
+}
+.triangle2{
+    width: 100%;
+    height: 50px;
+    background-image:var(--triangle2);
+    clip-path: polygon(100% 0, 0 0, 0% 100%);
+    position: absolute;
+
+}
+.tri2{
+    width: 0;
+    height: 0;
+    left: 0;
+    border-left: 0px solid transparent;
+    border-right: 80vw solid transparent;
+    border-top: 50px solid var(--brand-primary);
+    position: absolute;
+}
+.welcomeMessageContent{
+    font-family: var(--mainFont);
+    text-align: left;
+    top:40px;
+    position: absolute;
+}
+.welcomeMessageContent h1{
+    font-size: 1rem;
+    color: var(--brand-secondary);
+    font-weight: 800;
+}
+.welcomeMessageContent h4{
+    color: var(--body-text);
+    font-size: 0.8rem;
+    font-weight: 400;
+
+}
+.main{
+    padding: 10px 30px;
+    background-color: var(--bg_body);
+    padding-bottom: 180px;
+    display: flex;
+    justify-content: center;
+
+}
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1600px;
+}
+.searchTotalResults{
+    font-family: var(--mainFont);
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--body-text);
+}
+
+.searchBar{
+    display: flex;
+    width: 100%;
+    background-color: var(--bg_default);
+    padding: 0px 3px 0px 10px;
+    gap: 2px;
+    box-shadow: 0px 0px 2px 1px var(--lines-color);;
+    border-radius:10px;
+    overflow: hidden;
+}
+
+.searchInputWraper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+
+    background-color: var(--bg_default);  
+}
+.searchIcon{
+    width: 20px;
+    height: 15px;
+    color: var(--body-text);
+}
+.searchInput{
+    flex-grow: 1;
+    height: 100%;
+    border: none;
+    background-color: var(--bg_default);
+    padding-left: 10px;
+    color: var(--body-text);
+    border-right: 1px solid var(--lines-color);
+}
+.searchInput:focus{
+    outline: none;
+}
+.searchSortWraper,.searchFilterWraper{
+    width: 50%;
+    padding: 0px 5px;
+    border: none;
+}
+select{
+    background-color: var(--bg_default);
+    color: var(--body-text);
+  }
+
+.searchSort,.searchFilter{
+    width: 100%;
+    border: none;
+    font-size: 0.7rem;
+    font-family: var(--mainFont);
+    font-weight: 700;
+
+}
+.searchSortWraper{
+    border-right: 1px solid var(--lines-color);
+}
+.searchControls{
+    width: 40%;
+    display: flex;
+}
+.labelSearh{
+    margin-left: 5px;
+    font-size: 0.6rem;
+    color: var(--body-text);
+    font-family: var(--mainFont);
+    font-weight: 600;
+}
+
+
+.cardWraper{
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.card{
+    min-width: 230px;
+    max-width: 230px;
+    
+    padding-bottom: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid var(--lines-color);
+    background-color: var(--bg_default);
+}
+
+.cardImage{
+    width: 100%;
+    height: 50%;
+    background-color: #FFFFFF;
+    border-radius: 10px 10px 0px 0px ;
+}
+.allStars{
+    display: flex;
+}
+.ratingStars{
+    width: 18px;
+    display: flex;
+    margin-top: 20px;
+}
+
+.cardInfo{
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+.cardDiscription{
+    color: var(--body-text);
+    font-size: 0.8rem;
+    font-family: var(--mainFont);
+    font-weight: 600;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden; 
+
+}
+.cardTitle{
+    color: var(--body-text);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    font-family: var(--mainFont);
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+.cardAuther{
+    color: var(--body-text);
+    margin-top: 15px;
+    font-family: var(--mainFont);
+    font-weight: 200;
+}
+
+
+.favWindow{
+    background-color: var(--bg_default);
+    color: var(--body-text);
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    box-shadow:0px 0px 3px 1px var(--lines-color); ;
+    height: 180px;
+    padding: 10px 30px;
+    display: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: thin;
+
+}
+.favTopics{
+    font-family: var(--mainFont);
+    color: var(--body-text);
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+.favCards{
+    display: flex;
+    gap: 20px;
+}
+
+.favCard{
+    box-shadow: 0px 0px 1px 1px var(--lines-color);
+    width: 120px;
+    height: 120px;
+    border-radius: 5px 5px 0px 0px;
+
+}
+.favImg{
+    width: 120px;
+    height: 70px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.favTitle{
+    font-family: var(--mainFont);
+    font-weight: 800;
+    color: var(--body-text);
+    margin-left: 10px;
+    overflow: hidden; 
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.favStars{
+    margin-left: 10px;
+    display: flex;
+}
+.favStar{
+    width: 12px;
+
+}
+
+footer{
+    text-align: center;
+}
+
+.mainTopic{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+.background1{
+    width: 100%;
+    height: 300px;
+    background-color: #333333;
+}
+
+.topicWraper{
+    max-width: 800px;
+    position: relative;
+    position: absolute;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0px 0px 0px;
+    gap: 20px;
+}
+.fotterForTopic{
+    position: absolute;
+    bottom: -50px;
+    font-family: var(--mainFont);
+    color: var(--body-text);
+    font-size: 1rem;
+    display: flex;
+    font-weight: 700;
+    gap: 5px;
+    
+}
+.fotterForTopicIcon{
+    width: 22px;
+    color: #ed0000;
+    fill: red;
+}
+.topicInfoSubsWraper{
+    display: flex;
+    flex-direction: column;
+    min-width: 450px; 
+}
+.topicInfo{
+    font-family: var(--mainFont);
+    min-height: 300px; 
+}
+.topicTitle{
+    color: #03C180;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.topicAbbrev{
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.topicRatingStars{
+    display: flex;
+    margin-bottom: 15px;
+}
+.topicDescription{
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+}
+.topicSubs{
+    display: flex;
+    flex-direction: column;
+    font-family: var(--mainFont);
+    color: var(--body-text);
+}
+.topicSubsUnit{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    background-color: var(--bg_default);
+    border: 1px solid var(--lines-color);
+}
+.topicSubsUnit:first-child {
+    border-radius: 5px 5px 0px 0px ;
+ }
+.topicSubsUnit:last-child {
+    border-radius: 0px 0px 5px 5px;
+ }
+.topicSubsHeader{
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+.checkMark{
+    width: 35px;
+    color: #03C180;
+    margin-right: 15px;
+}
+.topicSubsUnitText{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.topicCard{
+    min-width: 350px;
+    height: 455px;
+    background-color: #FFFFFF;
+    font-family: var(--mainFont);
+    box-shadow: 0px 0px 10px -5px #333333;
+}
+
+.topicCardImage{
+    width: 350px;
+    height: 225px;
+    border: 2px solid #FFFFFF;
+    object-fit: cover;
+}
+.topicCardAttFavWraper{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    gap: 10px;
+}
+.topicCardAtt{
+    display: flex;
+    gap: 8px;
+
+}
+.topicCardAttTitle{
+    font-weight: 800;
+}
+.topicCardAttBy,.topicCardAttLink{
+    font-weight: 600;
+}
+.topicCardFavBox{
+    width: 100%;
+    padding: 15px 15px;
+    border: 1px solid #DDDDDD;
+    display: flex;
+    flex-direction: column;
+}
+.topicCardAddToFav{
+    width: 35px;
+}
+.intrested{
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.topicCardFavButton{
+    display: flex;
+    height: 70px;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #03C180;
+    color: #FFFFFF;
+    font-size: 26px;
+    font-weight: 300;
+
+}
+.unlimitedCredits{
+    margin-top: 10px;
+    color: #a8a6a6;
+    font-weight: 400;
+    align-self: center;
+
+}
+@media only screen and (max-width: 680px) {
+        .navButtonText{
+            display: none;
+        }
+
+        .searchBar{
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+            padding: 10px 10px;
+            gap: 10px;
+            
+        }
+        .searchInputWraper{
+            width: 100%;
+            height: 40px;
+        }
+        .searchControls{
+            width: 100%;
+        }
+    }
