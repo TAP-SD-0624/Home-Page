@@ -422,7 +422,8 @@ footer{
     color: var(--body-text);
 }
 .topicSubsUnit{
-    height: 60px;
+    min-height: 60px;
+    height: fit-content;
     display: flex;
     align-items: center;
     padding-left: 20px;
@@ -440,7 +441,9 @@ footer{
     font-weight: 800;
 }
 .checkMark{
-    width: 35px;
+    min-width: 35px;
+    max-width: 35px;
+
     color: #03C180;
     margin-right: 15px;
 }
@@ -450,7 +453,7 @@ footer{
 }
 .topicCard{
     min-width: 350px;
-    height: 455px;
+    height: max-content;
     background-color: #FFFFFF;
     font-family: var(--mainFont);
     box-shadow: 0px 0px 10px -5px #333333;
