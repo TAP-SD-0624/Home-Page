@@ -28,7 +28,7 @@ body{
 
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--bg_default);
 }
 .nav-list{
@@ -95,11 +95,12 @@ body{
     position: absolute;
 }
 .triangle2{
-    width: 100%;
+    width: 80%;
     height: 50px;
     background-image:var(--triangle2);
     clip-path: polygon(100% 0, 0 0, 0% 100%);
     position: absolute;
+    left: 0;
 
 }
 .tri2{
@@ -140,6 +141,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    
     max-width: 1600px;
 }
 .searchTotalResults{
@@ -165,7 +167,6 @@ body{
     align-items: center;
     justify-content: center;
     width: 60%;
-
     background-color: var(--bg_default);  
 }
 .searchIcon{
@@ -223,25 +224,29 @@ select{
     flex-grow: 1;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 20px;
+    justify-content: center;
+
 }
+
 .card{
     min-width: 230px;
     max-width: 230px;
-    
     padding-bottom: 20px;
     border-radius: 10px;
     cursor: pointer;
     border: 1px solid var(--lines-color);
     background-color: var(--bg_default);
+    
 }
+
 
 .cardImage{
     width: 100%;
     height: 50%;
     background-color: #FFFFFF;
     border-radius: 10px 10px 0px 0px ;
+    object-fit: cover;
 }
 .allStars{
     display: flex;
@@ -346,14 +351,17 @@ footer{
     text-align: center;
 }
 
+
+
+
+
+/* Topic */
 .mainTopic{
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
-
 
 .background1{
     width: 100%;
@@ -370,6 +378,7 @@ footer{
     justify-content: center;
     padding: 30px 0px 0px 0px;
     gap: 20px;
+
 }
 .fotterForTopic{
     position: absolute;
@@ -390,7 +399,6 @@ footer{
 .topicInfoSubsWraper{
     display: flex;
     flex-direction: column;
-    min-width: 450px; 
 }
 .topicInfo{
     font-family: var(--mainFont);
@@ -428,10 +436,13 @@ footer{
     align-items: center;
     padding-left: 20px;
     background-color: var(--bg_default);
-    border: 1px solid var(--lines-color);
+    border-bottom: 1px solid var(--lines-color);
+    border-left: 1px solid var(--lines-color);
+    border-right: 1px solid var(--lines-color);
 }
 .topicSubsUnit:first-child {
     border-radius: 5px 5px 0px 0px ;
+    border-top: 1px solid var(--lines-color);
  }
 .topicSubsUnit:last-child {
     border-radius: 0px 0px 5px 5px;
@@ -460,7 +471,7 @@ footer{
 }
 
 .topicCardImage{
-    width: 350px;
+    width: 100%;
     height: 225px;
     border: 2px solid #FFFFFF;
     object-fit: cover;
@@ -505,7 +516,18 @@ footer{
     color: #FFFFFF;
     font-size: 26px;
     font-weight: 300;
-
+}
+.miniTopicCardFavButton{
+    
+    display: flex;
+    height: 70px;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #03C180;
+    color: #FFFFFF;
+    font-size: 26px;
+    font-weight: 300;
+    display: none;
 }
 .unlimitedCredits{
     margin-top: 10px;
@@ -515,10 +537,10 @@ footer{
 
 }
 @media only screen and (max-width: 680px) {
+    /* home */
         .navButtonText{
             display: none;
         }
-
         .searchBar{
             flex-direction: column;
             align-items: center;
@@ -535,4 +557,37 @@ footer{
         .searchControls{
             width: 100%;
         }
+    /* Topic */
+    .topicWraper{
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+    }
+
+    .miniTopicCardFavButton{
+        display: flex;
+        margin-bottom: 20px;
+    }
+    .topicCardAttFavWraper{
+        display: none;
+    }
+    .topicInfoSubsWraper{
+
+        order: 1;
+    }
+    .background1{
+        width: 100%;
+        height: 600px;
+        background-color: #333333;
+    }
+    .topicCard{
+        background-color: #ffffff00;
+
+    }.topicCardImage{
+        width: 100%;
+        height: auto;
+        border: 2px solid #FFFFFF;
+        object-fit: cover;
+    }
+    
     }
