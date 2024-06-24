@@ -232,6 +232,7 @@ select{
 .card{
     min-width: 230px;
     max-width: 230px;
+    min-height: 300px;
     padding-bottom: 20px;
     border-radius: 10px;
     cursor: pointer;
