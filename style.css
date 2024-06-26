@@ -13,6 +13,13 @@
     --heart-color: #DC143C;
     --triangle2:linear-gradient(60deg, rgba(7,104,172,1) 10%, rgba(3,193,128,1) 100%);
     --mainFont:"Nunito Sans", sans-serif; 
+    --fullwhite:#FFFFFF;
+    --transperent:#ffffff00;
+    --static-background-color:#333333;
+    --unlimited-color:#a8a6a6;
+    --border-static:#DDDDDD;
+    --red-icon-1:#ed0000;
+    --red-icon-2:rgb(255, 0, 0);
 }
 .darkColors{
     --bg_default: #1A1A1A;
@@ -245,7 +252,7 @@ select{
 .cardImage{
     width: 100%;
     height: 50%;
-    background-color: #FFFFFF;
+    background-color: var(--fullwhite);
     border-radius: 10px 10px 0px 0px ;
     object-fit: cover;
 }
@@ -367,7 +374,7 @@ footer{
 .background1{
     width: 100%;
     height: 300px;
-    background-color: #333333;
+    background-color: var(--static-background-color);
 }
 
 .topicWraper{
@@ -394,8 +401,8 @@ footer{
 }
 .fotterForTopicIcon{
     width: 22px;
-    color: #ed0000;
-    fill: red;
+    color: var(--red-icon-1);
+    fill: var(--red-icon-2);
 }
 .topicInfoSubsWraper{
     display: flex;
@@ -406,12 +413,12 @@ footer{
     min-height: 300px; 
 }
 .topicTitle{
-    color: #03C180;
+    color: var(--brand-secondary);
     font-size: 1rem;
     font-weight: 500;
 }
 .topicAbbrev{
-    color: #FFFFFF;
+    color: var(--fullwhite);
     font-size: 1.5rem;
     font-weight: 700;
 }
@@ -420,7 +427,7 @@ footer{
     margin-bottom: 15px;
 }
 .topicDescription{
-    color: #FFFFFF;
+    color: var(--fullwhite);
     font-size: 16px;
     font-weight: 600;
 }
@@ -456,7 +463,7 @@ footer{
     min-width: 35px;
     max-width: 35px;
 
-    color: #03C180;
+    color: var(--brand-secondary);
     margin-right: 15px;
 }
 .topicSubsUnitText{
@@ -466,15 +473,15 @@ footer{
 .topicCard{
     min-width: 350px;
     height: max-content;
-    background-color: #FFFFFF;
+    background-color: var(--fullwhite);
     font-family: var(--mainFont);
-    box-shadow: 0px 0px 10px -5px #333333;
+    box-shadow: 0px 0px 10px -5px var(--static-background-color);
 }
 
 .topicCardImage{
     width: 100%;
     height: 225px;
-    border: 2px solid #FFFFFF;
+    border: 2px solid var(--fullwhite);
     object-fit: cover;
 }
 .topicCardAttFavWraper{
@@ -497,7 +504,7 @@ footer{
 .topicCardFavBox{
     width: 100%;
     padding: 15px 15px;
-    border: 1px solid #DDDDDD;
+    border: 1px solid var(--border-static);
     display: flex;
     flex-direction: column;
 }
@@ -514,7 +521,7 @@ footer{
     align-items: center;
     justify-content: space-evenly;
     background-color: var(--brand-secondary);
-    color: #FFFFFF;
+    color: var(--fullwhite);
     font-size: 26px;
     font-weight: 300;
 }
@@ -525,14 +532,14 @@ footer{
     align-items: center;
     justify-content: space-evenly;
     background-color: var(--brand-secondary);
-    color: #FFFFFF;
+    color: var(--fullwhite);
     font-size: 26px;
     font-weight: 300;
     display: none;
 }
 .unlimitedCredits{
     margin-top: 10px;
-    color: #a8a6a6;
+    color: var(--unlimited-color);
     font-weight: 400;
     align-self: center;
 
@@ -579,15 +586,15 @@ footer{
     .background1{
         width: 100%;
         height: 600px;
-        background-color: #333333;
+        background-color: var(--static-background-color);
     }
     .topicCard{
-        background-color: #ffffff00;
+        background-color: var(--transperent)
 
     }.topicCardImage{
         width: 100%;
         height: auto;
-        border: 2px solid #FFFFFF;
+        border: 2px solid var(--fullwhite);
         object-fit: cover;
     }
     
