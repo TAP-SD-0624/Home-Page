@@ -513,7 +513,7 @@ footer{
     height: 70px;
     align-items: center;
     justify-content: space-evenly;
-    background-color: #03C180;
+    background-color: var(--brand-secondary);
     color: #FFFFFF;
     font-size: 26px;
     font-weight: 300;
@@ -524,7 +524,7 @@ footer{
     height: 70px;
     align-items: center;
     justify-content: space-evenly;
-    background-color: #03C180;
+    background-color: var(--brand-secondary);
     color: #FFFFFF;
     font-size: 26px;
     font-weight: 300;
